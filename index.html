@@ -9,9 +9,21 @@
 <main>
   <h1>JavaScript入門！</h1>
 </main>
+<body>
+  <input type="button" id="plus" value="加算">
+<script type="text/javascript">
+  var plus = document.getElementById('plus');
 
-<script>
-console.log('GitHub Pages Sample');
+  var sum = 0; ★
+
+  plus.addEventListener('click', function(){
+
+    var plusNum = prompt("数字を入力");
+    sum += parseInt(plusNum); ★
+    console.log(sum);
+  });
 </script>
+</body>
+
 </body>
 </html>
