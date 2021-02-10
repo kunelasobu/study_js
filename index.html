@@ -30,6 +30,60 @@
     document.getElementById('total-time').innerHTML = sum;
   });
 </script>
+  <style>
+input {
+  /* デフォルトスタイルをリセット */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* font-familyを継承しないので、継承させる */
+  font-family: inherit;
+
+  /* iOSの角丸をリセット */
+  border-radius: 0;
+
+  /* box-size */
+  box-sizing: border-box;
+
+  /* 文字の大きさ iOSでズームさせないために16px以上を指定 */
+  font-size: 16px;
+
+  /* 文字色を親から継承 */
+  color: inherit;
+}
+body {
+  background: #f3f3f3;
+  color: #333;
+}
+h1 {
+  text-align: center;
+  color: #555;
+}
+.center {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+main {
+  width: 50%;
+  min-width: 320px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 18px;
+  background: #fff;
+  padding: 40px;
+}
+.total {
+  margin-top: 2rem;
+}
+#total-time {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1cbb4e;
+}
+</style>
 </body>
 
 </body>
