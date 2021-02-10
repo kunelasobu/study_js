@@ -10,19 +10,30 @@
   <h1>JavaScript入門！</h1>
 </main>
 <body>
-  <input type="text" value="" id="number">
-  <input type="button" id="plus" value="加算">
+<main>
+  <h1>JavaScript入門！</h1>
+</main>
+<body>
+  <div class="center">
+    <div class="title">どれくらい勉強した？</div>
+  </div>
+  <div class="time-input">
+    <input type="text" value="" id="number">時間
+    <input type="button" id="plus" value="加算">
+  </div>
+  <div class="total">
+    今までの勉強時間は<span id="total-time"></span>時間です
+  </div>
 <script type="text/javascript">
-  var plus = document.getElementById('plus');
-
-  var sum = 0;
+  let plus = document.getElementById('plus');
+  let sum = 0;
+  let str = document.getElementById('total-time').innerHTML;
 
   plus.addEventListener('click', function(){
-
-    // var plusNum = prompt("数字を入力");
-    var plusNum = document.getElementById('number').value;
+    let plusNum = document.getElementById('number').value;
     sum += parseInt(plusNum);
-    console.log(sum);
+
+    document.getElementById('total-time').innerHTML = sum;
   });
 </script>
 </body>
