@@ -10,17 +10,19 @@
 
 <body>
 <main>
+<div class="flex">
   <h1>JavaScript入門！</h1>
   <div class="center">
     <div class="title">どれくらい勉強した？</div>
   </div>
   <div class="time-input">
-    <input type="number" value="" id="number">時間
+    <input type="text" value="" id="number">時間
     <input type="button" id="plus" value="send">
   </div>
   <div class="total">
     今までの勉強時間は<span id="total-time"></span>時間です
   </div>
+</div>
 <script type="text/javascript">
   let plus = document.getElementById('plus');
   let sum = 0;
@@ -79,6 +81,12 @@ main {
   background: #fff;
   padding: 40px;
 }
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .total {
   margin-top: 2rem;
 }
@@ -95,9 +103,13 @@ input#plus {
   background: #1cbb4e;
   border: none;
   border-radius: 3px;
-  padding: 3px 12px;
+  padding: 6px 12px;
   color: #fff;
   letter-spacing: 1px;
+  margin: 8px;
+}
+.time-input {
+  text-align: center;
 }
 </style>
 </body>
