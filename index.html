@@ -10,6 +10,7 @@
   <h1>JavaScript入門！</h1>
 </main>
 <body>
+  <input type="text" value="" id="number">
   <input type="button" id="plus" value="加算">
 <script type="text/javascript">
   var plus = document.getElementById('plus');
@@ -18,7 +19,8 @@
 
   plus.addEventListener('click', function(){
 
-    var plusNum = prompt("数字を入力");
+    // var plusNum = prompt("数字を入力");
+    var plusNum = document.getElementById('number').value;
     sum += parseInt(plusNum);
     console.log(sum);
   });
