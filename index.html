@@ -13,7 +13,7 @@
 <div class="flex">
   <h1>JavaScript入門！</h1>
   <div class="center">
-    <div class="title">どれくらい勉強した？</div>
+    <div class="title">変更します。どれくらい勉強した？</div>
   </div>
   <div class="time-input">
     <input type="number" value="" id="number">時間
@@ -21,19 +21,31 @@
   </div>
   <div class="total">
     今までの勉強時間は<span id="total-time"></span>時間です
+    <input type="text" id="data-set" value="">
   </div>
+  <input type="button" value="保存" onclick="save();"/>
+
 </div>
 <script type="text/javascript">
-  let plus = document.getElementById('plus');
-  let sum = 0;
-  let str = document.getElementById('total-time').innerHTML;
+    //let plus = document.getElementById('plus');
+    let sum = 0;
+    //let str = document.getElementById('total-time').innerHTML;
 
-  plus.addEventListener('click', function(){
-    let plusNum = document.getElementById('number').value;
-    sum += parseInt(plusNum);
-
-    document.getElementById('total-time').innerHTML = sum;
-  });
+    plus.addEventListener('click', function(){
+        let plusNum = document.getElementById('number').value;
+        sum += parseInt(plusNum);
+        document.getElementById('total-time').innerHTML = sum;
+        document.getElementById('data-set').innerHTML = sum;
+    });
+    function save() {
+        let savedata = document.getElementById('data-set').innerHTML;
+        console.log(`data-set = ${data-set}`);
+        localStorage.setItem('savedata', savedata);
+    }
+    window.addEventListener('load', function () {
+        let reset = document.getElementById('number').value;
+        reset.value = "";
+    });
 </script>
   <style>
 input {
