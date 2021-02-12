@@ -30,9 +30,12 @@
 
   plus.addEventListener('click', function(){
     let plusNum = document.getElementById('number').value;
-    sum += parseInt(plusNum);
+    sum += plusNum;
+    str = sum;
+    // document.getElementById('total-time').innerHTML = sum;
 
-    document.getElementById('total-time').innerHTML = sum;
+    localStorage.setItem('sum', sum);
+
   });
 </script>
   <style>
