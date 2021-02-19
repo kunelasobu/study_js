@@ -27,8 +27,11 @@
 
 </div>
 <script type="text/javascript">
+  //cookieを保存
     let dataSave = $.cookie("total");
+  //数字をリセット
     let sum = 0;
+  //cookieがなければ新規保存、あれば表示
     if (typeof dataSave === "undefined"){
         $.cookie("total", 0, { expires: 150 });
     }else {
