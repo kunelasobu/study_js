@@ -40,7 +40,6 @@
         let plusNum = document.getElementById('number').value;
         sum += parseInt(plusNum);
         document.getElementById('total-time').innerHTML = sum;
-        document.getElementById('data-set').innerHTML = sum;
         $.cookie("total", sum, { expires: 150 });
     });
     
